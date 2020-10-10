@@ -3,7 +3,7 @@ package main
 import "log"
 
 func main() {
-	var cars = [4]string{"BMW", "TOYOTA", "DAIHATSU"}
+	var cars = []string{"BMW", "TOYOTA", "DAIHATSU", "samsas"}
 	log.Println(cars)
 	log.Println(len(cars))
 
@@ -14,5 +14,4 @@ func main() {
 	var multi = [][]int{[]int{1, 2, 4, 5}, []int{3, 4, 5, 6}}
 	log.Println(multi)
 	log.Println(len(multi))
-
 }
