@@ -4,11 +4,13 @@ import "log"
 
 func main() {
 	var numberA int = 4
+	// int pointer
 	var numberB *int = &numberA
 
 	log.Println(numberA)
 	log.Println(&numberA)
 
+	// get pointer value
 	log.Println(*numberB)
 	log.Println(numberB)
 

@@ -5,6 +5,7 @@ import (
 	"log"
 )
 
+// declare struct
 type student struct {
 	name   string
 	kelas  string
@@ -13,6 +14,7 @@ type student struct {
 
 func main() {
 
+	// using normal struct
 	var item student
 	item.name = "bambang"
 	item.kelas = "1"
@@ -21,6 +23,7 @@ func main() {
 	fmt.Println(item.kelas)
 	fmt.Println(item.number)
 
+	// using struct with object
 	data := student{
 		name:   "saskia",
 		kelas:  "31",
@@ -29,8 +32,10 @@ func main() {
 
 	log.Println(data)
 
+	// pointer struct
 	var c *student
 
+	// add value pointer struct
 	c = &student{
 		name: "olala",
 	}
