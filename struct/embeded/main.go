@@ -13,6 +13,7 @@ type student struct {
 type class struct {
 	list  []*student
 	total string
+	// avg   student
 }
 
 func main() {
@@ -28,8 +29,8 @@ func main() {
 
 	// anonymoust struct and using tag on struct
 	var p = struct {
-		Jumlah string `josn:"jumlah"`
-		Total  string `json:"total"`
+		Jumlah string `json:"jumlah"`
+		Total  string `xml:"total"`
 	}{"12", "30"}
 
 	log.Println(p)

@@ -6,10 +6,11 @@ import (
 )
 
 // func as a paramater
-func filter(data []string, callback func(string) bool) []string {
+func filter(data []string) []string {
 	var result []string
 	for _, p := range data {
-		if filtered := callback(p); filtered {
+		filtered := callback(p)
+		if filtered {
 			result = append(result, p)
 		}
 	}
@@ -17,11 +18,13 @@ func filter(data []string, callback func(string) bool) []string {
 	return result
 }
 
+func callback(each string) bool {
+	return strings.Contains(each, "o")
+}
+
 func main() {
 	var data = []string{"omama", "olala", "ethan"}
-	var arrData = filter(data, func(each string) bool {
-		return strings.Contains(each, "o")
-	})
+	var arrData = filter(data)
 
 	log.Println(arrData)
 }

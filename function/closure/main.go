@@ -12,10 +12,9 @@ func main() {
 
 		status = status + ": " + message
 		return status
-	}
-	// (true, "oke nihh")
+	}(true, "oke nihh")
 
-	// log.Println(closure)
+	log.Println(closure)
 
-	log.Println(closure(false, "is not oke"))
+	// log.Println(closure(flse, "is not oke"))
 }

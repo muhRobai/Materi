@@ -14,10 +14,6 @@ type lingkaran struct {
 	diameter float64
 }
 
-type persegi struct {
-	sisi float64
-}
-
 func (c lingkaran) jariJari() float64 {
 	return c.diameter / 2
 }
@@ -30,20 +26,27 @@ func (c lingkaran) keliling() float64 {
 	return math.Pi * c.jariJari()
 }
 
-func (p persegi) luas() float64 {
-	return math.Pow(p.sisi, 2)
-}
+// type persegi struct {
+// 	sisi float64
+// }
 
-func (p persegi) keliling() float64 {
-	return p.sisi * 4
-}
+// func (p persegi) luas() float64 {
+// 	return math.Pow(p.sisi, 2)
+// }
+
+// func (p persegi) keliling() float64 {
+// 	return p.sisi * 4
+// }
 
 func main() {
 	var bangunDatar hitung
 
-	bangunDatar = persegi{10.0}
-	log.Println("luas persegi : ", bangunDatar.luas())
-	log.Println("keliling persegi : ", bangunDatar.keliling())
+	var param []interface{}
+	param = append(param, "olala")
+	param = append(param, 10)
+	// bangunDatar = persegi{10.0}
+	// log.Println("luas persegi : ", bangunDatar.luas())
+	// log.Println("keliling persegi : ", bangunDatar.keliling())
 
 	bangunDatar = lingkaran{14.0}
 	log.Println("luas lingkaran : ", bangunDatar.luas())
