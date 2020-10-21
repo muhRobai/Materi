@@ -17,11 +17,9 @@ func (c student) setSudent(name string, grade int) {
 }
 
 func main() {
-	var s1 = student{
-		name:  "olala",
-		grade: 10,
-	}
-	s1.setSudent("nbambang", 30)
+	var s1 student
+
+	s1.setSudent("bambang", 30)
 
 	log.Println(s1.getStudent())
 }
